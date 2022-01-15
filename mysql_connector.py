@@ -11,9 +11,7 @@ my_database = mysql.connect(
 # Making Cursor Object For Query Execution
 my_cursor = my_database.cursor()
 # Making Class for Cheacking functions
-class Cheacking:
-
-  def selectMYSQL():
+def selectMYSQL():
     sql = ("SELECT * FROM earthquakes")
     my_cursor.execute(sql)
     myresult = my_cursor.fetchall()
@@ -23,7 +21,7 @@ class Cheacking:
   #selectMYSQL()
 
 
-  def describeDB():
+def describeDB():
     sql = ("DESCRIBE earthquakes")
     my_cursor.execute(sql)
     for x in my_cursor:
@@ -31,7 +29,7 @@ class Cheacking:
 
   #describeDB()
 
-  def check_database_isempty():
+def check_database_isempty():
     try:
       area = input("Enter the Area : local or regional : ")
       sql = "Select * from earthquakes where area='" + area + "'"
@@ -47,7 +45,7 @@ class Cheacking:
 
   #check_database_isempty()
 
-  def check_corect_area():
+def check_corect_area():
       sql = "SELECT id from test.earthquakes where area not in ('local','global','regional','')"
       my_cursor.execute(sql)
       check_area = my_cursor.fetchall()
@@ -58,7 +56,7 @@ class Cheacking:
 
   #check_corect_area()
 
-  def check_origin_msec():
+def check_origin_msec():
 
       sql = "select id from test.earthquakes where origin_msec > 1000 or origin_msec < 0"
       my_cursor.execute(sql)

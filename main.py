@@ -1,7 +1,7 @@
-from  mysql_connector import Cheacking
+import  mysql_connector
 
 #Cheaking Area
-Cheacking.check_corect_area()
+check_corect_area()
 
 #Cheaking Origin MSEC
-Cheacking.check_origin_msec()
+check_origin_msec()

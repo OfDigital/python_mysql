@@ -1,5 +1,4 @@
 import pymysql
-from mysql_connector import Cheacking
 
 #database connection
 connection = pymysql.connect(host="localhost",user="root",passwd="",database="test" )
