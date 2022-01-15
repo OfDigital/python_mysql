@@ -1,7 +1,7 @@
 import  mysql_connector
 
 #Cheaking Area
-check_corect_area()
+mysql_connector.check_corect_area()
 
 #Cheaking Origin MSEC
-check_origin_msec()
+mysql_connector.check_origin_msec()
